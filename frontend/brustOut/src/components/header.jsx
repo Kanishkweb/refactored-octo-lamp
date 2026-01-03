@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
-    <div className="navbar bg-base-100 shadow-sm px-4">
+    <div className="navbar bg-base-100 shadow-sm px-4 fixed top-0 left-0 w-full z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -25,7 +27,7 @@ export default function Header() {
             className="menu menu-sm dropdown-content mt-3 z-1 w-52 rounded-box bg-base-100 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <a>Explore</a>
@@ -44,13 +46,26 @@ export default function Header() {
           </ul>
         </div>
 
-        <a className="btn btn-ghost text-xl">EmoMate</a>
+        <Link to="/" className=" px-2">
+          <img
+            src="/icon2.png"
+            alt="EmoMate"
+            className="
+      w-12 h-12
+      sm:w-14 sm:h-14
+      lg:w-16 lg:h-16
+      object-contain
+    "
+          />
+        </Link>
       </div>
 
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-2">
           <li>
-            <a>Home</a>
+            <Link to="/" className="cursor-pointer z-10">
+              Home
+            </Link>
           </li>
 
           <li>
@@ -68,15 +83,18 @@ export default function Header() {
           </li>
 
           <li>
-            <a>About Us</a>
+            <Link to="/about">About Us</Link>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end">
-        <a className="btn bg-[#8a8e82] text-black hover:bg-[#5048e5] border-none">
+        <Link
+          to="/signup"
+          className="btn bg-[#20233c50] text-black hover:bg-[#81808a] border-none"
+        >
           Get Started
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="footer sm:footer-horizontal bg-[#0f1729] text-white p-10">
@@ -15,7 +16,7 @@ export default function Footer() {
         </svg>
 
         <p className="text-white/70">
-          <span className="text-[#91c3fd] font-semibold">BurnOut</span>
+          <span className="text-[#91c3fd] font-semibold">Emomate</span>
           <br />A safe space to talk, heal, and grow together.
         </p>
       </aside>
@@ -35,9 +36,13 @@ export default function Footer() {
 
       <nav>
         <h6 className="footer-title text-[#91c3fd]">Company</h6>
-        <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
+
+        <Link
+          to="/about"
+          className="link link-hover text-white/70 hover:text-[#91c3fd]"
+        >
           About Us
-        </a>
+        </Link>
         <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
           Contact
         </a>

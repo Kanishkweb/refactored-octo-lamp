@@ -1,11 +1,15 @@
 import React from "react";
-import Header from "./components/header.jsx";
-import Footer from "./components/footer.jsx";
-export default function HeroSection() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthLayout from "./layouts/AuthLayout";
+
+import AboutUs from "./pages/aboutUs.jsx";
+import LoginPage from "./pages/loginPage.jsx";
+import SignUp from "./pages/signUp.jsx";
+
+function Home() {
   return (
     <>
-      <div className="min-h-screen overflow-x-hidden">
-        <Header />
+      <div className="w-full overflow-x-hidden">
         <div className="flex flex-col gap-15">
           <div className="flex flex-col items-center justify-center w-full gap-10 m-10">
             <div className="h-full text-center text-4xl lg:text-6xl px-10 text-[#91c3fd] font-bold">
@@ -30,7 +34,7 @@ export default function HeroSection() {
               {/* Step 1 */}
               <div className="card w-72 bg-base-100 hover:bg-[#0f1729] hover:scale-102 hover:text-white shadow-md hover:shadow-xl transition duration-300">
                 <div className="card-body items-center text-center">
-                  <span className="badge badge-primary badge-lg">Step 1</span>
+                  <span className="badge bg-amber-600 badge-lg">Step 1</span>
                   <h2 className="card-title text-xl text-[#91c3fd font-bold mt-2">
                     Sign up anonymously
                   </h2>
@@ -377,8 +381,21 @@ export default function HeroSection() {
             </div>
           </section>
         </div>
-        <Footer />
       </div>
     </>
+  );
+}
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AuthLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
