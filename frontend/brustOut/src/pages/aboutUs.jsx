@@ -1,26 +1,54 @@
 function AboutUs() {
     return (
-        <div className="min-h-screen bg-[#020517] flex items-center justify-center px-4 pt-24 pb-10">
+        <div className="min-h-screen bg-[#020517] px-4 pt-24 pb-10">
+            {/* ABOUT EMOMATE */}
+            <div className="max-w-4xl mx-auto text-center mb-20">
+                <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    About <span className="text-[#91c3fd]">Emomate</span>
+                </h1>
 
-            <div className="flex flex-col gap-10 w-full items-center">
+                <p className="text-[#91c3fd]/80 text-lg leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
+                    <br /><br />
+                    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
+                    varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus
+                    magna felis sollicitudin mauris. Integer in mauris eu nibh euismod
+                    gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis
+                    risus a elit. Etiam tempor.
+                </p>
+            </div>
+
+            {/* ABOUT DEVELOPERS */}
+            <div className="max-w-4xl mx-auto text-center mb-14">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-white">
+                    About the <span className="text-[#91c3fd]">Developers</span>
+                </h2>
+            </div>
+
+            <div
+                className="
+          grid
+          grid-cols-1
+          gap-10
+          w-full
+
+          lg:grid-cols-2
+          lg:gap-12
+          lg:max-w-5xl
+
+          mx-auto
+          place-items-center
+        "
+            >
 
                 {/* CARD – UDDHAV */}
-                <div
-                    className="
-            bg-[#0f1729]
-            rounded-xl
-            px-6 py-8
-            w-full
-            max-w-md
-            border border-[#5048e5]/30
-            hover:border-[#5048e5]
-            hover:shadow-[0_0_25px_rgba(80,72,229,0.45)]
-            hover:scale-[1.02]
-            transition-all
-            duration-150
-            ease-in
-          "
-                >
+                <div className="bg-[#0f1729] rounded-xl px-6 py-8 w-full max-w-md border border-[#5048e5]/30 hover:border-[#5048e5] hover:shadow-[0_0_25px_rgba(80,72,229,0.45)] hover:scale-[1.02] transition-all duration-150 ease-in">
                     <div className="flex flex-col items-center text-center gap-4">
                         <img
                             src="https://avatars.githubusercontent.com/u/237316139?v=4"
@@ -84,22 +112,7 @@ function AboutUs() {
                 </div>
 
                 {/* CARD – SUSHMITA */}
-                <div
-                    className="
-            bg-[#0f1729]
-            rounded-xl
-            px-6 py-8
-            w-full
-            max-w-md
-            border border-[#5048e5]/30
-            hover:border-[#5048e5]
-            hover:shadow-[0_0_25px_rgba(80,72,229,0.45)]
-            hover:scale-[1.02]
-            transition-all
-            duration-150
-            ease-in
-          "
-                >
+                <div className="bg-[#0f1729] rounded-xl px-6 py-8 w-full max-w-md border border-[#5048e5]/30 hover:border-[#5048e5] hover:shadow-[0_0_25px_rgba(80,72,229,0.45)] hover:scale-[1.02] transition-all duration-150 ease-in">
                     <div className="flex flex-col items-center text-center gap-4">
                         <img
                             src="https://avatars.githubusercontent.com/u/193432954?v=4"
@@ -147,24 +160,8 @@ function AboutUs() {
                     </div>
                 </div>
 
-
                 {/* CARD – HARISH */}
-                <div
-                    className="
-    bg-[#0f1729]
-    rounded-xl
-    px-6 py-8
-    w-full
-    max-w-md
-    border border-[#5048e5]/30
-    hover:border-[#5048e5]
-    hover:shadow-[0_0_25px_rgba(80,72,229,0.45)]
-    hover:scale-[1.02]
-    transition-all
-    duration-150
-    ease-in
-  "
-                >
+                <div className="bg-[#0f1729] rounded-xl px-6 py-8 w-full max-w-md border border-[#5048e5]/30 hover:border-[#5048e5] hover:shadow-[0_0_25px_rgba(80,72,229,0.45)] hover:scale-[1.02] transition-all duration-150 ease-in">
                     <div className="flex flex-col items-center text-center gap-4">
                         <img
                             src="https://avatars.githubusercontent.com/u/187415267?v=4"
@@ -232,23 +229,9 @@ function AboutUs() {
                         </div>
                     </div>
                 </div>
+
                 {/* CARD – KANISHK */}
-                <div
-                    className="
-    bg-[#0f1729]
-    rounded-xl
-    px-6 py-8
-    w-full
-    max-w-md
-    border border-[#5048e5]/30
-    hover:border-[#5048e5]
-    hover:shadow-[0_0_25px_rgba(80,72,229,0.45)]
-    hover:scale-[1.02]
-    transition-all
-    duration-150
-    ease-in
-  "
-                >
+                <div className="bg-[#0f1729] rounded-xl px-6 py-8 w-full max-w-md border border-[#5048e5]/30 hover:border-[#5048e5] hover:shadow-[0_0_25px_rgba(80,72,229,0.45)] hover:scale-[1.02] transition-all duration-150 ease-in">
                     <div className="flex flex-col items-center text-center gap-4">
                         <img
                             src="https://avatars.githubusercontent.com/u/129086096?v=4"
@@ -303,22 +286,7 @@ function AboutUs() {
                 </div>
 
                 {/* CARD – SONU */}
-                <div
-                    className="
-    bg-[#0f1729]
-    rounded-xl
-    px-6 py-8
-    w-full
-    max-w-md
-    border border-[#5048e5]/30
-    hover:border-[#5048e5]
-    hover:shadow-[0_0_25px_rgba(80,72,229,0.45)]
-    hover:scale-[1.02]
-    transition-all
-    duration-150
-    ease-in
-  "
-                >
+                <div className="bg-[#0f1729] rounded-xl px-6 py-8 w-full max-w-md border border-[#5048e5]/30 hover:border-[#5048e5] hover:shadow-[0_0_25px_rgba(80,72,229,0.45)] hover:scale-[1.02] transition-all duration-150 ease-in">
                     <div className="flex flex-col items-center text-center gap-4">
                         <img
                             src="https://avatars.githubusercontent.com/u/131330264?v=4"
@@ -389,8 +357,6 @@ function AboutUs() {
                         </div>
                     </div>
                 </div>
-
-
 
             </div>
         </div>
