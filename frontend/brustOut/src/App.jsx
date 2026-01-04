@@ -32,7 +32,7 @@ function Home() {
             <p className="text-5xl font-bold text-[#91c3fd]">How it works?</p>
             <div className="flex flex-col lg:flex-row items-center justify-around gap-8 px-4 py-10">
               {/* Step 1 */}
-              <div className="card w-72 bg-base-100 hover:bg-[#0f1729] hover:scale-102 hover:text-white shadow-md hover:shadow-xl transition duration-300">
+              <div className="card w-72 bg-[#1c2229] hover:bg-[#0f1729] hover:scale-102 hover:text-white shadow-md hover:shadow-xl transition duration-300">
                 <div className="card-body items-center text-center">
                   <span className="badge bg-amber-600 badge-lg">Step 1</span>
                   <h2 className="card-title text-xl text-[#91c3fd font-bold mt-2">
@@ -46,7 +46,7 @@ function Home() {
               </div>
 
               {/* Step 2 */}
-              <div className="card w-72 hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-base-100 shadow-md hover:shadow-xl transition duration-300">
+              <div className="card w-72 hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover:shadow-xl transition duration-300">
                 <div className="card-body items-center text-center">
                   <span className="badge badge-secondary badge-lg">Step 2</span>
                   <h2 className="card-title text-xl font-bold mt-2">
@@ -60,7 +60,7 @@ function Home() {
               </div>
 
               {/* Step 3 */}
-              <div className="card w-72 hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-base-100 shadow-md hover:shadow-xl transition duration-300">
+              <div className="card w-72 hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover:shadow-xl transition duration-300">
                 <div className="card-body items-center text-center">
                   <span className="badge badge-accent badge-lg">Step 3</span>
                   <h2 className="card-title text-xl font-bold mt-2">
@@ -74,7 +74,7 @@ function Home() {
               </div>
 
               {/* Step 4 */}
-              <div className="card w-72 hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-base-100 shadow-md hover:shadow-xl transition duration-300">
+              <div className="card w-72 hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover:shadow-xl transition duration-300">
                 <div className="card-body items-center text-center">
                   <span className="badge badge-success badge-lg">Step 4</span>
                   <h2 className="card-title text-xl font-bold mt-2">
