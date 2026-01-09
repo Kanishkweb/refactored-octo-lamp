@@ -1,6 +1,22 @@
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export default function Header() {
+  const mobileJoinRef = useRef(null);
+  const desktopJoinRef = useRef(null);
+
+  const closeMobileJoin = () => {
+    if (mobileJoinRef.current) {
+      mobileJoinRef.current.removeAttribute("open");
+    }
+  };
+
+  const closeDesktopJoin = () => {
+    if (desktopJoinRef.current) {
+      desktopJoinRef.current.removeAttribute("open");
+    }
+  };
+
   return (
     <div className="navbar bg-[#020517] text-white shadow-md px-4 fixed top-0 left-0 w-full z-50">
       {/* LEFT */}
@@ -29,25 +45,33 @@ export default function Header() {
             className="menu menu-sm dropdown-content mt-3 z-10 w-56 rounded-box bg-[#0f1729] p-2 shadow"
           >
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={closeMobileJoin}>
+                Home
+              </Link>
             </li>
 
             <li>
-              <details>
+              <details ref={mobileJoinRef}>
                 <summary>Join As</summary>
                 <ul className="p-2">
                   <li>
-                    <Link to="/student-onboarding">I Need Support</Link>
+                    <Link to="/student-onboarding" onClick={closeMobileJoin}>
+                      I Need Support
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/listener-onboarding">I Want to Support</Link>
+                    <Link to="/listener-onboarding" onClick={closeMobileJoin}>
+                      I Want to Support
+                    </Link>
                   </li>
                 </ul>
               </details>
             </li>
 
             <li>
-              <Link to="/about">About Us</Link>
+              <Link to="/about" onClick={closeMobileJoin}>
+                About Us
+              </Link>
             </li>
           </ul>
         </div>
@@ -70,14 +94,18 @@ export default function Header() {
           </li>
 
           <li>
-            <details>
+            <details ref={desktopJoinRef}>
               <summary className="cursor-pointer">Join As</summary>
               <ul className="p-2 bg-[#0f1729] rounded-box w-48 shadow">
                 <li>
-                  <Link to="/student-onboarding">I Need Support</Link>
+                  <Link to="/student-onboarding" onClick={closeDesktopJoin}>
+                    I Need Support
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/listener-onboarding">I Want to Support</Link>
+                  <Link to="/listener-onboarding" onClick={closeDesktopJoin}>
+                    I Want to Support
+                  </Link>
                 </li>
               </ul>
             </details>
@@ -89,13 +117,36 @@ export default function Header() {
         </ul>
       </div>
 
-      {/* RIGHT */}
-      <div className="navbar-end">
+      {/* RIGHT – Login / Signup */}
+      <div className="navbar-end flex items-center gap-3">
+        <Link
+          to="/login"
+          className="
+      text-sm
+      px-3 py-1.5
+      rounded-md
+      border border-white/20
+      text-white
+      hover:bg-white/10
+      transition
+    "
+        >
+          Login
+        </Link>
+
         <Link
           to="/signup"
-          className="btn bg-[#5048e5] hover:bg-[#4038d8] text-white border-none"
+          className="
+      text-sm
+      px-3 py-1.5
+      rounded-md
+      border border-white/20
+      text-white
+      hover:bg-white/10
+      transition
+    "
         >
-          Get Started
+          Sign up
         </Link>
       </div>
     </div>

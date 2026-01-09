@@ -4,6 +4,8 @@ const steps = ["Basic Info", "Availability", "Experience", "Empathy", "Submit"];
 
 export default function ListenerOnboarding() {
   const [step, setStep] = useState(0);
+  const [error, setError] = useState("");
+
   const [form, setForm] = useState({
     name: "",
     age: "",
@@ -36,10 +38,53 @@ export default function ListenerOnboarding() {
     }
   };
 
+  const validateStep = () => {
+    setError("");
+
+    if (step === 0) {
+      if (!form.name || !form.age || form.languages.length === 0) {
+        setError("Please fill all required fields.");
+        return false;
+      }
+      if (Number(form.age) < 18) {
+        setError("You are not eligible to become a listener.");
+        return false;
+      }
+    }
+
+    if (step === 1) {
+      if (!form.hours || form.mode.length === 0) {
+        setError("Please complete this step.");
+        return false;
+      }
+    }
+
+    if (step === 2) {
+      if (!form.experience || form.comfortAreas.length === 0) {
+        setError("Please select your experience and topics.");
+        return false;
+      }
+    }
+
+    if (step === 3) {
+      if (!form.whyListener || !form.responseStyle || !form.ethicsAccepted) {
+        setError("All fields are required to continue.");
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  const nextStep = () => {
+    if (validateStep()) {
+      setStep(step + 1);
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#020517] px-4">
       <div className="w-full max-w-2xl bg-[#0f1729] rounded-2xl shadow-2xl p-8 text-white">
-        {/* Header */}
         <h1 className="text-3xl font-bold text-[#91c3fd] mb-2">
           Become a Listener
         </h1>
@@ -52,7 +97,7 @@ export default function ListenerOnboarding() {
           {steps.map((_, i) => (
             <div
               key={i}
-              className={`h-2 flex-1 rounded-full transition-all ${
+              className={`h-2 flex-1 rounded-full ${
                 i <= step ? "bg-[#5048e5]" : "bg-white/20"
               }`}
             />
@@ -63,20 +108,31 @@ export default function ListenerOnboarding() {
         {step === 0 && (
           <div className="space-y-4">
             <Input
-              label="Preferred Name"
+              label="Preferred Name *"
               name="name"
               value={form.name}
               onChange={handleChange}
+              required
             />
+
             <Input
               label="Age (18+)"
               name="age"
               type="number"
+              min={1}
               value={form.age}
               onChange={handleChange}
+              required
             />
+
+            {form.age && Number(form.age) < 18 && (
+              <p className="text-red-400 text-sm">
+                You are not eligible to become a listener
+              </p>
+            )}
+
             <MultiSelect
-              label="Languages you're comfortable with"
+              label="Languages you're comfortable with *"
               name="languages"
               options={["English", "Hindi", "Hinglish", "Marathi"]}
               values={form.languages}
@@ -89,14 +145,14 @@ export default function ListenerOnboarding() {
         {step === 1 && (
           <div className="space-y-4">
             <RadioGroup
-              label="Weekly Availability"
+              label="Weekly Availability *"
               name="hours"
               value={form.hours}
               options={["2–4 hrs", "4–6 hrs", "6+ hrs"]}
               onChange={handleChange}
             />
             <MultiSelect
-              label="You're comfortable with"
+              label="You're comfortable with *"
               name="mode"
               options={["Text Chat", "Voice Call"]}
               values={form.mode}
@@ -109,7 +165,7 @@ export default function ListenerOnboarding() {
         {step === 2 && (
           <div className="space-y-4">
             <Select
-              label="Your experience"
+              label="Your experience *"
               name="experience"
               value={form.experience}
               onChange={handleChange}
@@ -121,7 +177,7 @@ export default function ListenerOnboarding() {
               ]}
             />
             <MultiSelect
-              label="Topics you're comfortable supporting"
+              label="Topics you're comfortable supporting *"
               name="comfortAreas"
               options={[
                 "Breakups",
@@ -140,13 +196,13 @@ export default function ListenerOnboarding() {
         {step === 3 && (
           <div className="space-y-4">
             <Textarea
-              label="Why do you want to be a listener?"
+              label="Why do you want to be a listener? *"
               name="whyListener"
               value={form.whyListener}
               onChange={handleChange}
             />
             <Textarea
-              label="How do you respond when someone is overwhelmed?"
+              label="How do you respond when someone is overwhelmed? *"
               name="responseStyle"
               value={form.responseStyle}
               onChange={handleChange}
@@ -158,29 +214,20 @@ export default function ListenerOnboarding() {
                 checked={form.ethicsAccepted}
                 onChange={handleChange}
               />
-              I agree to EmoMate's safety & ethics guidelines
+              I agree to EmoMate's safety & ethics guidelines *
             </label>
           </div>
         )}
 
-        {/* STEP 5 */}
-        {step === 4 && (
-          <div className="text-center space-y-3">
-            <p className="text-xl text-[#91c3fd]">
-              Thank you for being here 💙
-            </p>
-            <p className="text-white/60">
-              We'll review your application with care.
-            </p>
-          </div>
-        )}
+        {/* ERROR */}
+        {error && <p className="text-red-400 text-sm mt-4">{error}</p>}
 
-        {/* Buttons */}
+        {/* BUTTONS */}
         <div className="flex justify-between mt-10">
           {step > 0 && (
             <button
               onClick={() => setStep(step - 1)}
-              className="px-6 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition"
+              className="px-6 py-2 rounded-lg bg-white/10 hover:bg-white/20"
             >
               Back
             </button>
@@ -188,13 +235,13 @@ export default function ListenerOnboarding() {
 
           {step < steps.length - 1 ? (
             <button
-              onClick={() => setStep(step + 1)}
-              className="ml-auto px-6 py-2 rounded-lg bg-[#5048e5] hover:opacity-90 transition font-semibold"
+              onClick={nextStep}
+              className="ml-auto px-6 py-2 rounded-lg bg-[#5048e5] font-semibold disabled:opacity-40"
             >
               Continue
             </button>
           ) : (
-            <button className="ml-auto px-8 py-3 rounded-xl bg-[#91c3fd] text-[#020517] font-bold hover:scale-105 transition">
+            <button className="ml-auto px-8 py-3 rounded-xl bg-[#91c3fd] text-[#020517] font-bold">
               Submit Application
             </button>
           )}
@@ -204,14 +251,14 @@ export default function ListenerOnboarding() {
   );
 }
 
-/* ---------------- Components ---------------- */
+/* ---------- Components ---------- */
 
 const Input = ({ label, ...props }) => (
   <div>
     <label className="block mb-1 text-sm text-white/70">{label}</label>
     <input
       {...props}
-      className="w-full px-4 py-2 rounded-lg bg-[#020517] border border-white/10 focus:border-[#5048e5] outline-none"
+      className="w-full px-4 py-2 rounded-lg bg-[#020517] border border-white/10"
     />
   </div>
 );
@@ -222,7 +269,7 @@ const Textarea = ({ label, ...props }) => (
     <textarea
       {...props}
       rows={4}
-      className="w-full px-4 py-2 rounded-lg bg-[#020517] border border-white/10 focus:border-[#5048e5] outline-none"
+      className="w-full px-4 py-2 rounded-lg bg-[#020517] border border-white/10"
     />
   </div>
 );
