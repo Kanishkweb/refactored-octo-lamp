@@ -22,7 +22,7 @@ export default function HeroPage() {
                 Start Talking Now
               </button>
               <button className="bg-transparent border border-[#5048e5] text-[#5048e5] px-6 py-3 rounded-xl hover:bg-[#5048e5] hover:text-white transition">
-                Learn Here
+                Learn More
               </button>
             </div>
           </div>
