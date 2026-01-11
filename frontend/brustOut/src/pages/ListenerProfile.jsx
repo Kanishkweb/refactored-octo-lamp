@@ -19,7 +19,7 @@ import {
 
 const listenerData = {
   name: "Sarah Johnson",
-  avatar: "/avatar.webp",
+  avatar: "https://avatars.githubusercontent.com/u/193432954?v=4",
   role: "Verified Listener",
   tagline:
     "Compassionate listener here to support you through life's challenges",
@@ -60,11 +60,11 @@ export default function ListenerProfile() {
               </Avatar>
 
               <div className="flex-1 text-center md:text-left">
-                <div className="mb-2 flex flex-col gap-2 md:flex-row md:items-center">
-                  <h1 className="text-3xl font-bold text-white">
+                <div className="mb-2 flex flex-col gap-2 md:flex-col md:items-center">
+                  <h1 className="text-3xl lg:self-start font-bold text-white">
                     {listenerData.name}
                   </h1>
-                  <Badge className="flex gap-1 bg-[#5048e5] text-white">
+                  <Badge className="flex gap-1 w-33 self-center lg:self-start lg:w-40 h-auto bg-[#5048e5] text-white">
                     <CheckCircle2 className="h-4 w-4" />
                     {listenerData.role}
                   </Badge>

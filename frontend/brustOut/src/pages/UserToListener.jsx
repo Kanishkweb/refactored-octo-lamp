@@ -75,18 +75,14 @@ Your feelings are valid, and you are not alone here.`,
 
               <div className="flex gap-3 mt-4">
                 {[MessageCircle, Phone, Info].map((Icon, i) => (
-                  <Button
-                    key={i}
-                    size="icon"
-                    variant="outline"
-                    style={{
-                      borderColor: "#91c3fd",
-                      color: "#91c3fd",
-                      backgroundColor: "transparent",
-                    }}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </Button>
+                    <Button
+                        key={i}
+                        size="icon"
+                        variant="outline"
+                        className="border-[#91c3fd] text-[#91c3fd] hover:bg-[#91c3fd] hover:text-white"
+                    >
+                      <Icon />
+                    </Button>
                 ))}
               </div>
             </div>
@@ -181,13 +177,14 @@ Your feelings are valid, and you are not alone here.`,
             <h2 className="text-[#91c3fd] font-semibold">
               Safety & Trust
             </h2>
-            <Button
-              variant="outline"
-              style={{ borderColor: "#ef4444", color: "#ef4444" }}
+            <div
+                className="inline-flex items-center gap-2 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white rounded-md px-4 py-2 cursor-pointer transition-colors"
             >
-              <AlertCircle className="w-4 h-4 mr-2" />
+              <AlertCircle className="w-4 h-4" />
               Report
-            </Button>
+            </div>
+
+
           </div>
 
           <p className="text-[#94a3b8] text-sm">
