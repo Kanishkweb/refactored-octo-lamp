@@ -26,9 +26,13 @@ export default function Footer() {
         <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
           Anonymous Chat
         </a>
-        <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
+        <Link
+          to="/listener/L-001"
+          className="link link-hover text-white/70 hover:text-[#91c3fd]"
+        >
           Mentorship
-        </a>
+        </Link>
+
         <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
           Community Support
         </a>
@@ -36,7 +40,6 @@ export default function Footer() {
 
       <nav>
         <h6 className="footer-title text-[#91c3fd]">Company</h6>
-
         <Link
           to="/about"
           className="link link-hover text-white/70 hover:text-[#91c3fd]"
@@ -46,9 +49,12 @@ export default function Footer() {
         <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
           Contact
         </a>
-        <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
+        <Link
+          to="/listener"
+          className="link link-hover text-white/70 hover:text-[#91c3fd]"
+        >
           Team
-        </a>
+        </Link>{" "}
       </nav>
 
       <nav>

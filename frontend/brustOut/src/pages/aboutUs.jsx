@@ -50,7 +50,7 @@ function AboutUs() {
         {/* CARD – UDDHAV */}
         <div
           className="bg-[#0f1729] rounded-xl px-5 py-6 w-full max-w-sm
-                min-h-[380px]
+                min-h-95
                 flex flex-col justify-between
                 border border-[#5048e5]/30
                 hover:border-[#5048e5]
@@ -122,7 +122,7 @@ function AboutUs() {
         {/* CARD – SUSHMITA */}
         <div
           className="bg-[#0f1729] rounded-xl px-5 py-6 w-full max-w-sm
-                min-h-[380px]
+                min-h-95
                 flex flex-col justify-between
                 border border-[#5048e5]/30
                 hover:border-[#5048e5]
@@ -176,7 +176,7 @@ function AboutUs() {
         {/* CARD – HARISH */}
         <div
           className="bg-[#0f1729] rounded-xl px-5 py-6 w-full max-w-sm
-                min-h-[380px]
+                min-h-95
                 flex flex-col justify-between
                 border border-[#5048e5]/30
                 hover:border-[#5048e5]
@@ -251,7 +251,7 @@ function AboutUs() {
         {/* CARD – KANISHK */}
         <div
           className="bg-[#0f1729] rounded-xl px-5 py-6 w-full max-w-sm
-                min-h-[380px]
+                min-h-95
                 flex flex-col justify-between
                 border border-[#5048e5]/30
                 hover:border-[#5048e5]
@@ -311,7 +311,7 @@ function AboutUs() {
         {/* CARD – SONU */}
         <div
           className="bg-[#0f1729] rounded-xl px-5 py-6 w-full max-w-sm
-                min-h-[380px]
+                min-h-95
                 flex flex-col justify-between
                 border border-[#5048e5]/30
                 hover:border-[#5048e5]
