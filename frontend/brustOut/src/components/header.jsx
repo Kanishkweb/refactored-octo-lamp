@@ -50,6 +50,19 @@ export default function Header() {
               </Link>
             </li>
 
+
+            <li>
+              <Link to="/" className="
+      px-4 py-1.5
+      rounded-full
+      bg-[#5048e5]
+      !text-white
+      font-semibold
+      hover:bg-[#3f3ad9]
+      transition
+    ">Get Premium</Link>
+            </li>
+
             <li>
               <details ref={mobileJoinRef}>
                 <summary>Join As</summary>
@@ -93,6 +106,7 @@ export default function Header() {
             <Link to="/">Home</Link>
           </li>
 
+
           <li>
             <details ref={desktopJoinRef}>
               <summary className="cursor-pointer">Join As</summary>
@@ -114,8 +128,23 @@ export default function Header() {
           <li>
             <Link to="/about">About Us</Link>
           </li>
+
+          <li>
+            <Link to="/" className="
+      px-4 py-1.5
+      rounded-full
+      bg-[#5048e5]
+      !text-white
+      font-semibold
+      hover:bg-[#3f3ad9]
+      transition
+    ">Get Premium</Link>
+          </li>
         </ul>
       </div>
+
+
+
 
       {/* RIGHT – Login / Signup */}
       <div className="navbar-end flex items-center gap-3">
