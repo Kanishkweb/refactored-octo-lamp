@@ -9,6 +9,8 @@ import HeroPage from "./pages/heroPage.jsx";
 import ListenerOnboarding from "./pages/ListenerOnboarding.jsx";
 import ListenerProfile from "./pages/ListenerProfile";
 import UserToListener from "./pages/UserToListener";
+import Premium from "./pages/Premium";
+import FeedbackPage from "./pages/FeedbackPage";
 
 function Home() {
   return <HeroPage />;
@@ -25,6 +27,8 @@ export default function App() {
         <Route path="/listener-onboarding" element={<ListenerOnboarding />} />
         <Route path="/listener" element={<ListenerProfile />} />
         <Route path="/listener/:id" element={<UserToListener />} />
+        <Route path="/premium" element={<Premium />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
       </Route>
     </Routes>
   );

@@ -133,7 +133,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
             <div className="card w-96 bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="card-body gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-base-200">
-                  {/* Clock Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -358,7 +357,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                 </div>
               </div>
 
-              {/* Card 4 */}
               <div className="card bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300">
                 <div className="card-body flex-row gap-5 items-start">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100">
@@ -388,6 +386,94 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+          <section className="px-6 py-24 bg-[#020517] text-white">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#91c3fd] mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-white/70 text-lg">
+                Everything you need to know before getting started with EmoMate.
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              <details className="group bg-[#0f1729] rounded-xl p-5 transition-all">
+                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
+                  What is EmoMate and who is it for?
+                  <span className="transition-transform group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p className="mt-4 text-white/70 leading-relaxed">
+                  EmoMate is a safe and anonymous emotional support platform.
+                  It’s for anyone who feels overwhelmed, lonely, or simply needs
+                  someone to talk to without fear of judgment.
+                </p>
+              </details>
+
+              <details className="group bg-[#0f1729] rounded-xl p-5">
+                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
+                  Is EmoMate free to use?
+                  <span className="transition-transform group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p className="mt-4 text-white/70">
+                  Yes, EmoMate offers free emotional support through trained
+                  listeners. We also offer a Premium plan with extended sessions
+                  and mentor access.
+                </p>
+              </details>
+
+              <details className="group bg-[#0f1729] rounded-xl p-5">
+                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
+                  Are my conversations private?
+                  <span className="transition-transform group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p className="mt-4 text-white/70">
+                  Absolutely. All conversations are confidential and protected.
+                  We do not track, record, or share your personal data.
+                </p>
+              </details>
+
+              <details className="group bg-[#0f1729] rounded-xl p-5">
+                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
+                  Who are the mentors on EmoMate?
+                  <span className="transition-transform group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p className="mt-4 text-white/70">
+                  Mentors are trained and verified individuals who provide
+                  empathetic guidance and emotional support in a safe,
+                  respectful manner.
+                </p>
+              </details>
+
+              <details className="group bg-[#0f1729] rounded-xl p-5">
+                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
+                  What if I need urgent help?
+                  <span className="transition-transform group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p className="mt-4 text-white/70">
+                  If you are in immediate danger or crisis, please contact local
+                  emergency services or a crisis helpline. EmoMate is for
+                  emotional support, not emergency care.
+                </p>
+              </details>
+            </div>
+
+            <div className="mt-16 text-center">
+              <p className="text-white/70 mb-4">Still have questions?</p>
+              <button className="bg-[#5048e5] px-8 py-3 rounded-xl font-semibold hover:opacity-90 transition">
+                Contact Support
+              </button>
             </div>
           </section>
         </div>

@@ -23,19 +23,25 @@ export default function Footer() {
 
       <nav>
         <h6 className="footer-title text-[#91c3fd]">Services</h6>
-        <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
+        <Link
+          to="/feedback"
+          className="link link-hover text-white/70 hover:text-[#91c3fd]"
+        >
           Anonymous Chat
-        </a>
+        </Link>
+
         <Link
           to="/listener/L-001"
           className="link link-hover text-white/70 hover:text-[#91c3fd]"
         >
           Mentorship
         </Link>
-
-        <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
+        <Link
+          to="/premium"
+          className="link link-hover text-white/70 hover:text-[#91c3fd]"
+        >
           Community Support
-        </a>
+        </Link>
       </nav>
 
       <nav>
