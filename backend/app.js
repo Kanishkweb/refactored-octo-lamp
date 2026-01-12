@@ -13,8 +13,10 @@ server.use(cors());
 server.use(express.json());
 
 import User from "./schema/User.schema.js";
+import Listener from './schema/Listener.schema.js';
 
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
 mongoose.connect(process.env.DB_URL, {
@@ -96,6 +98,51 @@ server.post("/user/login", async (req, res) => {
 
     return res.status(200).json({
       username: user.username
+    });
+
+  });
+
+});
+
+// Listener Signup....
+server.post("/listener/signup", async (req, res) => {
+
+  let { fullname, email, password, bio } = req.body;
+
+  if(fullname.lenght < 3){
+    return res.status(403).json({ error: "Fullname must be at least 3 characters long" });
+  }
+
+  if(!emailRegex.test(email)){
+    return res.status(403).json({ error: "Invalid email" });
+  }
+
+  if(!passwordRegex.test(password)){
+    return res.status(403).json({ error: "Password should be 6-20 characters with 1 uppercase, 1 lowercase and 1 number" });  
+  }
+
+  bcrypt.hash(password, 10, async (err, hashed_password) => {
+
+    let listener = new Listener({
+        fullname,
+        email,
+        password: hashed_password,
+        bio,
+        role: "listener",
+        status: "pending"
+    });
+
+    listener.save()
+    .then(l => {
+      return res.status(200).json({
+        message: "Listener registered. Awaiting admin approval."
+      });
+    })
+    .catch(err => {
+      if(err.code === 11000){
+        return res.status(403).json({ error: "Email already exists" });
+      }
+      return res.status(500).json({ error: err.message });
     });
 
   });
