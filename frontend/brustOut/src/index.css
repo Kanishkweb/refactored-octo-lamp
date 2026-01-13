@@ -75,6 +75,19 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+.emomate-primary-btn {
+  background-color: #3e36de !important;
+}
+
+.emomate-primary-btn:hover {
+  background-color: #4338ca !important;
+}
+
+.emomate-primary-btn:disabled {
+  background-color: rgba(62, 54, 222, 0.4) !important;
+  cursor: not-allowed;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
