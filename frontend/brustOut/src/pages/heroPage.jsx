@@ -387,40 +387,63 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                 },
                 {
                   q: "Is EmoMate free to use?",
-                  a: "Yes, EmoMate offers free emotional support through trained listeners. We also offer a Premium plan with extended sessions and mentor access.",
+                  a: "Yes, EmoMate offers free emotional support through listeners. We also offer a Premium plan with extended sessions and 24x7 chat access.",
                 },
                 {
                   q: "Are my conversations private?",
                   a: "Absolutely. All conversations are confidential and protected. We do not track, record, or share your personal data.",
                 },
                 {
-                  q: "Who are the mentors on EmoMate?",
-                  a: "Mentors are trained and verified individuals who provide empathetic guidance and emotional support in a safe, respectful manner.",
+                  q: "Who are the listeners on EmoMate?",
+                  a: "Listeners on EmoMate are carefully verified individuals who have gone through similar emotional experiences and understand what it feels like to struggle. They listen with empathy, respect, and care—without judgment or advice being forced. Their role is simply to offer a safe, supportive space where you can express yourself freely and feel genuinely heard.",
                 },
                 {
                   q: "What if I need urgent help?",
                   a: "If you are in immediate danger or crisis, please contact local emergency services or a crisis helpline. EmoMate is for emotional support, not emergency care.",
                 },
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="w-full bg-[#0f1729] rounded-xl p-5 box-border"
-                >
-                  <button
-                    type="button"
-                    className="w-full text-left font-semibold text-lg"
-                    onClick={(e) => {
-                      const el = e.currentTarget.nextSibling;
-                      el.classList.toggle("hidden");
-                    }}
+                  <div
+                      key={idx}
+                      className="w-full bg-[#0f1729] rounded-xl p-4 sm:p-5 box-border transition-all duration-300"
                   >
-                    {item.q}
-                  </button>
+                    <button
+                        type="button"
+                        className="w-full text-left font-semibold text-base sm:text-lg flex justify-between items-center"
+                        onClick={(e) => {
+                          const answer = e.currentTarget.nextSibling;
+                          const arrow = e.currentTarget.querySelector("span");
 
-                  <p className="mt-4 text-white/70 leading-relaxed hidden">
-                    {item.a}
-                  </p>
-                </div>
+                          answer.classList.toggle("max-h-0");
+                          answer.classList.toggle("opacity-0");
+                          answer.classList.toggle("mt-0");
+
+                          arrow.classList.toggle("rotate-180");
+                        }}
+                    >
+                      {item.q}
+                      <span className="text-white/60 text-xl transition-transform duration-300">
+      ⌄
+    </span>
+                    </button>
+
+                    <p
+                        className="
+      mt-0
+      max-h-0
+      overflow-hidden
+      opacity-0
+      text-white/70
+      text-sm sm:text-base
+      leading-relaxed
+      transition-all duration-500 ease-in-out
+    "
+                    >
+                      {item.a}
+                    </p>
+                  </div>
+
+
+
               ))}
             </div>
 
