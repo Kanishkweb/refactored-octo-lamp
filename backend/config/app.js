@@ -6,24 +6,30 @@ import jwt from 'jsonwebtoken';
 import dotenv from "dotenv";
 
 dotenv.config();
+console.log(process.env.DB_URL)
 
 const server = express();
 
 server.use(cors());
 server.use(express.json());
 
-import User from "./schema/User.schema.js";
-import Listener from './schema/Listener.schema.js';
+import User from "../schema/User.schema.js";
+import Listener from '../schema/Listener.schema.js';
 
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
-mongoose.connect(process.env.DB_URL, {
-  
-  autoIndex: true
-
-})
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.DB_URL);
+    console.log("✅ MongoDB Connected");
+  } catch (error) {
+    console.error("❌ DB Error:", error.message);
+    process.exit(1);
+  }
+};
+connectDB();
 
 
 // User Sign-up...
