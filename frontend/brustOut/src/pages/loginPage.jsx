@@ -31,7 +31,7 @@ export default function Login() {
               w-full mb-6
               px-4 py-3
               rounded-xl
-
+              hidden
               border-2 border-[#5048e5]/30
               text-white font-medium
 
@@ -49,7 +49,7 @@ export default function Login() {
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="px-4 bg-[#0f1729] text-[#91c3fd]/70 font-medium">
-                Or login with email
+                login with email
               </span>
             </div>
           </div>

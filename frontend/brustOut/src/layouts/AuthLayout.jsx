@@ -1,8 +1,15 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 export default function AuthLayout() {
+  const location = useLocation();
+
+  // 🔥 CHAT PAGE → PURE OUTLET (NO STYLES, NO HEADER)
+  if (location.pathname.startsWith("/chat")) {
+    return <Outlet />;
+  }
+
   return (
     <>
       <Header />
