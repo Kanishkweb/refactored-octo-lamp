@@ -70,10 +70,9 @@ export default function Header() {
                 <summary>Join As</summary>
                 <ul className="p-2">
                   <li>
-                    <Link to="/student-onboarding" onClick={closeMobileJoin}>
-                      I Need Support
-                    </Link>
+                    <Link to="/dashboard/user">I Need Support</Link>
                   </li>
+
                   <li>
                     <Link to="/listener-onboarding" onClick={closeMobileJoin}>
                       I Want to Support
@@ -111,9 +110,7 @@ export default function Header() {
               <summary className="cursor-pointer">Join As</summary>
               <ul className="p-2 bg-[#0f1729] rounded-box w-48 shadow">
                 <li>
-                  <Link to="/user-home" onClick={closeDesktopJoin}>
-                    I Need Support
-                  </Link>
+                  <Link to="/dashboard/user">I Need Support</Link>
                 </li>
 
                 <li>
