@@ -66,9 +66,13 @@ export default function Footer() {
         <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
           Terms and condition
         </a>
-        <a className="link link-hover text-white/70 hover:text-[#91c3fd]">
+
+        <Link
+          to="/chat"
+          className="link link-hover text-white/70 hover:text-[#91c3fd]"
+        >
           Privacy Policy
-        </a>
+        </Link>
       </nav>
     </footer>
   );

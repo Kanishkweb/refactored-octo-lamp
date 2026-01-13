@@ -11,7 +11,7 @@ export default function HeroPage() {
               You don't have to face it alone
             </div>
             <div className="text-center text-white/70">
-              Connect with empathetic mentors anonymously. Share your feelings
+              Connect with empathetic listeners anonymously. Share your feelings
               in a safe, judgment-free space whenever you need support.
             </div>
             <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -160,7 +160,7 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                     <path d="M14 21v-2a5 5 0 015-5" />
                   </svg>
                 </div>
-                <h2 className="card-title">Empathetic Mentors</h2>
+                <h2 className="card-title">Empathetic Listeners</h2>
                 <p>
                   Connect with trained mentors who truly care about your
                   wellbeing.
@@ -394,8 +394,8 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                   a: "Absolutely. All conversations are confidential and protected. We do not track, record, or share your personal data.",
                 },
                 {
-                  q: "Who are the mentors on EmoMate?",
-                  a: "Mentors are trained and verified individuals who provide empathetic guidance and emotional support in a safe, respectful manner.",
+                  q: "Who are the listeners on EmoMate?",
+                  a: "listeners are trained and verified individuals who provide empathetic guidance and emotional support in a safe, respectful manner.",
                 },
                 {
                   q: "What if I need urgent help?",
