@@ -91,8 +91,6 @@ export default function ListenerOnboarding() {
         <p className="text-white/70 mb-6">
           Your empathy can make someone feel safe, heard, and less alone.
         </p>
-
-        {/* Progress */}
         <div className="flex gap-2 mb-8">
           {steps.map((_, i) => (
             <div
@@ -103,8 +101,6 @@ export default function ListenerOnboarding() {
             />
           ))}
         </div>
-
-        {/* STEP 1 */}
         {step === 0 && (
           <div className="space-y-4">
             <Input
@@ -140,8 +136,6 @@ export default function ListenerOnboarding() {
             />
           </div>
         )}
-
-        {/* STEP 2 */}
         {step === 1 && (
           <div className="space-y-4">
             <RadioGroup
@@ -161,7 +155,6 @@ export default function ListenerOnboarding() {
           </div>
         )}
 
-        {/* STEP 3 */}
         {step === 2 && (
           <div className="space-y-4">
             <Select
@@ -191,8 +184,6 @@ export default function ListenerOnboarding() {
             />
           </div>
         )}
-
-        {/* STEP 4 */}
         {step === 3 && (
           <div className="space-y-4">
             <Textarea
@@ -218,11 +209,7 @@ export default function ListenerOnboarding() {
             </label>
           </div>
         )}
-
-        {/* ERROR */}
         {error && <p className="text-red-400 text-sm mt-4">{error}</p>}
-
-        {/* BUTTONS */}
         <div className="flex justify-between mt-10">
           {step > 0 && (
             <button
@@ -250,8 +237,6 @@ export default function ListenerOnboarding() {
     </div>
   );
 }
-
-/* ---------- Components ---------- */
 
 const Input = ({ label, ...props }) => (
   <div>

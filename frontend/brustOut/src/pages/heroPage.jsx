@@ -29,7 +29,6 @@ export default function HeroPage() {
           <div className="flex flex-col items-center justify-center w-full gap-4">
             <p className="text-5xl font-bold text-[#91c3fd]">How it works?</p>
             <div className="flex flex-col lg:flex-row items-center justify-around gap-8 px-4 py-10">
-              {/* Step 1 */}
               <div
                 className="card w-72 min-h-57.5
  bg-[#1c2229] hover:bg-[#0f1729] hover:scale-102 hover:text-white shadow-md hover:shadow-xl transition duration-300"
@@ -46,7 +45,6 @@ export default function HeroPage() {
                 </div>
               </div>
 
-              {/* Step 2 */}
               <div
                 className="card w-72 min-h-57.5
  hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover:shadow-xl transition duration-300"
@@ -63,7 +61,6 @@ export default function HeroPage() {
                 </div>
               </div>
 
-              {/* Step 3 */}
               <div
                 className="card w-72  min-h-57.5
 hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover:shadow-xl transition duration-300"
@@ -80,7 +77,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                 </div>
               </div>
 
-              {/* Step 4 */}
               <div
                 className="card w-72 min-h-57.5
  hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover:shadow-xl transition duration-300"
@@ -104,11 +100,9 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
           <p className="text-5xl font-bold">Why choose Us?</p>
 
           <div className="flex flex-col gap-6 items-center lg:grid lg:grid-cols-3 lg:gap-8 px-6 py-12">
-            {/* Card 1 */}
             <div className="card w-96 bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="card-body gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-base-200">
-                  {/* Lock Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -129,7 +123,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="card w-96 bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="card-body gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-base-200">
@@ -150,11 +143,9 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="card w-96 bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="card-body gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-base-200">
-                  {/* Users Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -177,11 +168,9 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
               </div>
             </div>
 
-            {/* Card 4 */}
             <div className="card w-96 bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="card-body gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-base-200">
-                  {/* Spark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -200,11 +189,9 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
               </div>
             </div>
 
-            {/* Card 5 */}
             <div className="card w-96 bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="card-body gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-base-200">
-                  {/* Chat Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -224,7 +211,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
               </div>
             </div>
 
-            {/* Card 6 */}
             <div className="card w-96 bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300 ease-in-out">
               <div className="card-body gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-base-200">
@@ -254,7 +240,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
             </div>
           </div>
           <section className="px-6 py-20">
-            {/* Heading */}
             <div className="text-center max-w-3xl mx-auto mb-14">
               <h2 className="text-4xl font-bold text-base-content mb-4">
                 Built with safety in mind
@@ -265,9 +250,7 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
               </p>
             </div>
 
-            {/* Cards Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* Card 1 */}
               <div className="card bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300">
                 <div className="card-body flex-row gap-5 items-start">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100">
@@ -296,7 +279,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div className="card bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300">
                 <div className="card-body flex-row gap-5 items-start">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100">
@@ -326,7 +308,6 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
                 </div>
               </div>
 
-              {/* Card 3 */}
               <div className="card bg-base-100 shadow-md rounded-2xl hover:shadow-xl transition-shadow duration-300">
                 <div className="card-body flex-row gap-5 items-start">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100">
@@ -399,74 +380,48 @@ hover:bg-[#0f1729] hover:scale-102 hover:text-white bg-[#1c2229] shadow-md hover
             </div>
 
             <div className="max-w-3xl mx-auto space-y-4">
-              <details className="group bg-[#0f1729] rounded-xl p-5 transition-all">
-                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
-                  What is EmoMate and who is it for?
-                  <span className="transition-transform group-open:rotate-180">
-                    ⌄
-                  </span>
-                </summary>
-                <p className="mt-4 text-white/70 leading-relaxed">
-                  EmoMate is a safe and anonymous emotional support platform.
-                  It’s for anyone who feels overwhelmed, lonely, or simply needs
-                  someone to talk to without fear of judgment.
-                </p>
-              </details>
+              {[
+                {
+                  q: "What is EmoMate and who is it for?",
+                  a: "EmoMate is a safe and anonymous emotional support platform. It’s for anyone who feels overwhelmed, lonely, or simply needs someone to talk to without fear of judgment.",
+                },
+                {
+                  q: "Is EmoMate free to use?",
+                  a: "Yes, EmoMate offers free emotional support through trained listeners. We also offer a Premium plan with extended sessions and mentor access.",
+                },
+                {
+                  q: "Are my conversations private?",
+                  a: "Absolutely. All conversations are confidential and protected. We do not track, record, or share your personal data.",
+                },
+                {
+                  q: "Who are the mentors on EmoMate?",
+                  a: "Mentors are trained and verified individuals who provide empathetic guidance and emotional support in a safe, respectful manner.",
+                },
+                {
+                  q: "What if I need urgent help?",
+                  a: "If you are in immediate danger or crisis, please contact local emergency services or a crisis helpline. EmoMate is for emotional support, not emergency care.",
+                },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="w-full bg-[#0f1729] rounded-xl p-5 box-border"
+                >
+                  <button
+                    type="button"
+                    className="w-full text-left font-semibold text-lg"
+                    onClick={(e) => {
+                      const el = e.currentTarget.nextSibling;
+                      el.classList.toggle("hidden");
+                    }}
+                  >
+                    {item.q}
+                  </button>
 
-              <details className="group bg-[#0f1729] rounded-xl p-5">
-                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
-                  Is EmoMate free to use?
-                  <span className="transition-transform group-open:rotate-180">
-                    ⌄
-                  </span>
-                </summary>
-                <p className="mt-4 text-white/70">
-                  Yes, EmoMate offers free emotional support through trained
-                  listeners. We also offer a Premium plan with extended sessions
-                  and mentor access.
-                </p>
-              </details>
-
-              <details className="group bg-[#0f1729] rounded-xl p-5">
-                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
-                  Are my conversations private?
-                  <span className="transition-transform group-open:rotate-180">
-                    ⌄
-                  </span>
-                </summary>
-                <p className="mt-4 text-white/70">
-                  Absolutely. All conversations are confidential and protected.
-                  We do not track, record, or share your personal data.
-                </p>
-              </details>
-
-              <details className="group bg-[#0f1729] rounded-xl p-5">
-                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
-                  Who are the mentors on EmoMate?
-                  <span className="transition-transform group-open:rotate-180">
-                    ⌄
-                  </span>
-                </summary>
-                <p className="mt-4 text-white/70">
-                  Mentors are trained and verified individuals who provide
-                  empathetic guidance and emotional support in a safe,
-                  respectful manner.
-                </p>
-              </details>
-
-              <details className="group bg-[#0f1729] rounded-xl p-5">
-                <summary className="cursor-pointer list-none flex justify-between items-center font-semibold text-lg">
-                  What if I need urgent help?
-                  <span className="transition-transform group-open:rotate-180">
-                    ⌄
-                  </span>
-                </summary>
-                <p className="mt-4 text-white/70">
-                  If you are in immediate danger or crisis, please contact local
-                  emergency services or a crisis helpline. EmoMate is for
-                  emotional support, not emergency care.
-                </p>
-              </details>
+                  <p className="mt-4 text-white/70 leading-relaxed hidden">
+                    {item.a}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <div className="mt-16 text-center">

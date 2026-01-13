@@ -48,7 +48,6 @@ export default function ListenerProfile() {
   return (
     <div className="min-h-screen bg-[#020517] px-4 py-10">
       <div className="mx-auto max-w-4xl">
-        {/* Profile Header */}
         <Card className="mb-6 border-none bg-[#0f1729] shadow-lg">
           <div className="bg-linear-to-r from-[#5048e5]/20 via-[#91c3fd]/10 to-transparent p-8">
             <div className="flex flex-col items-center gap-6 md:flex-row">
@@ -85,9 +84,7 @@ export default function ListenerProfile() {
           </div>
         </Card>
 
-        {/* Info Section */}
         <div className="grid gap-6 md:grid-cols-2">
-          {/* Basic Info */}
           <Card className="border-none bg-[#0f1729] shadow-md">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
@@ -148,7 +145,6 @@ export default function ListenerProfile() {
             </CardContent>
           </Card>
 
-          {/* Areas of Comfort */}
           <Card className="border-none bg-[#0f1729] shadow-md">
             <CardHeader>
               <CardTitle className="text-white">Areas of Comfort</CardTitle>
@@ -167,7 +163,6 @@ export default function ListenerProfile() {
           </Card>
         </div>
 
-        {/* About */}
         <Card className="mt-6 border-none bg-[#0f1729] shadow-md">
           <CardHeader>
             <CardTitle className="text-white">About Me</CardTitle>
@@ -182,7 +177,6 @@ export default function ListenerProfile() {
           </CardContent>
         </Card>
 
-        {/* CTA */}
         <div className="mt-8 rounded-lg bg-linear-to-r from-[#5048e5]/30 to-[#91c3fd]/20 p-6 text-center">
           <h3 className="text-2xl font-semibold text-white">Ready to talk?</h3>
           <p className="mt-2 text-gray-300">

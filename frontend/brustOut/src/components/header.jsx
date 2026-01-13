@@ -19,9 +19,7 @@ export default function Header() {
 
   return (
     <div className="navbar bg-[#020517] text-white shadow-md px-4 fixed top-0 left-0 w-full z-50">
-      {/* LEFT */}
       <div className="navbar-start">
-        {/* MOBILE MENU */}
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -50,17 +48,21 @@ export default function Header() {
               </Link>
             </li>
 
-
             <li>
-              <Link to="/" className="
+              <Link
+                to="/"
+                className="
       px-4 py-1.5
       rounded-full
       bg-[#5048e5]
-      !text-white
+      text-white!
       font-semibold
       hover:bg-[#3f3ad9]
       transition
-    ">Get Premium</Link>
+    "
+              >
+                Get Premium
+              </Link>
             </li>
 
             <li>
@@ -89,7 +91,6 @@ export default function Header() {
           </ul>
         </div>
 
-        {/* LOGO */}
         <Link to="/" className="px-2">
           <img
             src="/icon2.png"
@@ -99,23 +100,22 @@ export default function Header() {
         </Link>
       </div>
 
-      {/* CENTER (DESKTOP MENU) */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-4">
           <li>
             <Link to="/">Home</Link>
           </li>
 
-
           <li>
             <details ref={desktopJoinRef}>
               <summary className="cursor-pointer">Join As</summary>
               <ul className="p-2 bg-[#0f1729] rounded-box w-48 shadow">
                 <li>
-                  <Link to="/student-onboarding" onClick={closeDesktopJoin}>
+                  <Link to="/user-home" onClick={closeDesktopJoin}>
                     I Need Support
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/listener-onboarding" onClick={closeDesktopJoin}>
                     I Want to Support
@@ -130,23 +130,24 @@ export default function Header() {
           </li>
 
           <li>
-            <Link to="/" className="
+            <Link
+              to="/premium"
+              className="
       px-4 py-1.5
       rounded-full
       bg-[#5048e5]
-      !text-white
+      text-white!
       font-semibold
       hover:bg-[#3f3ad9]
       transition
-    ">Get Premium</Link>
+    "
+            >
+              Get Premium
+            </Link>
           </li>
         </ul>
       </div>
 
-
-
-
-      {/* RIGHT – Login / Signup */}
       <div className="navbar-end flex items-center gap-3">
         <Link
           to="/login"

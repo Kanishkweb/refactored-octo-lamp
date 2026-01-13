@@ -29,7 +29,7 @@ function AboutUs() {
       {/* ABOUT DEVELOPERS */}
       <div className="max-w-4xl mx-auto text-center mb-14">
         <h2 className="text-3xl lg:text-4xl font-semibold text-white">
-          About the <span className="text-[#91c3fd]">Developers</span>
+          About the <span className="text-[#91c3fd]">Team</span>
         </h2>
       </div>
       <div

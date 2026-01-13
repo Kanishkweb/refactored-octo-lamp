@@ -39,7 +39,7 @@ export default function FeedbackPage() {
 
       setTimeout(() => {
         window.location.reload();
-      }, 1500);
+      }, 1000);
     } catch (err) {
       console.error("Feedback submit failed", err);
     }

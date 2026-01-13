@@ -24,7 +24,6 @@
   --color-secondary: #5048e5;
   --color-accent: #91c3fd;
   --radius: 0.625rem;
-
 }
 
 body {
@@ -68,10 +67,6 @@ button {
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.25s, border-color 0.25s;
-}
-
-button:hover {
-  background-color: var(--color-secondary);
 }
 
 button:focus,

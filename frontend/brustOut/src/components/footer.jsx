@@ -36,11 +36,9 @@ export default function Footer() {
         >
           Mentorship
         </Link>
-        <Link
-          to="/premium"
-          className="link link-hover text-white/70 hover:text-[#91c3fd]"
-        >
-          Community Support
+
+        <Link to="/dashboard" className="text-white/70 hover:text-[#91c3fd]">
+          Dashboard
         </Link>
       </nav>
 
