@@ -16,7 +16,8 @@ server.use(express.json());
 import User from "../schema/User.schema.js";
 import Listener from '../schema/Listener.schema.js';
 
-const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+// const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+const passwordRegex = /^.{6,}$/;
 let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
@@ -31,18 +32,71 @@ const connectDB = async () => {
 };
 connectDB();
 
+// Username-Generator.....
+server.get("/user/generate-username", async (req, res) => {
+
+  const adjectives = [
+    "Silent","Calm","Gentle","Brave","Kind",
+    "Lonely","Quiet","Soft","Hopeful","Free"
+  ];
+
+  const nouns = [
+    "Sky","Moon","River","Leaf","Ocean",
+    "Star","Cloud","Forest","Stone","Wind"
+  ];
+
+  let username;
+  let exists = true;
+
+  while(exists){
+    const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+    const noun = nouns[Math.floor(Math.random() * nouns.length)];
+    const suffix = Math.floor(100 + Math.random() * 900); // 3 digits
+
+    username = `${adj}${noun}${suffix}`;
+    exists = await User.exists({ username });
+  }
+
+  return res.status(200).json({ username });
+
+});
+
+
+// Check - Username....
+server.get("/user/check-username", async (req, res) => {
+
+  const { username } = req.query;
+
+  if(!username || username.length < 3){
+    return res.status(400).json({ available: false });
+  }
+
+  const exists = await User.exists({ username: username.toLowerCase() });
+
+  return res.status(200).json({
+    available: !exists
+  });
+});
+
+
 
 // User Sign-up...
 server.post("/user/signup", async (req, res) => {
 
   let { username, password } = req.body;
+  username = username.toLowerCase();
 
   if(!username || username.length < 3){
     return res.status(403).json({ error: "Username must be at least 3 characters long" });
   }
 
   if(!passwordRegex.test(password)){
-    return res.status(403).json({ error: "Password should be 6-20 characters with 1 uppercase, 1 lowercase and 1 number" })
+    return res.status(403).json({ error: "Password must be at least 6 characters long" })
+  }
+
+  const existing = await User.findOne({ username });
+  if(existing){
+    return res.status(403).json({ error: "Username already taen" });
   }
 
   bcrypt.hash(password, 10, async (err, hashed_password) => {

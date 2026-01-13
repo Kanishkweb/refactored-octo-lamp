@@ -6,7 +6,7 @@ import DashboardLayout from "./layouts/DashboardLayout";
 
 import AboutUs from "./pages/aboutUs.jsx";
 import LoginPage from "./pages/loginPage.jsx";
-import SignUp from "./pages/signUp.jsx";
+import SignUp from "./pages/signUp3.jsx";
 import HeroPage from "./pages/heroPage.jsx";
 import ListenerOnboarding from "./pages/ListenerOnboarding.jsx";
 import ListenerProfile from "./pages/ListenerProfile";
